@@ -1,0 +1,27 @@
+﻿@page "/any-chatboard"
+@rendermode InteractiveServer
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+<div>
+    @foreach (var line in list)
+    {
+        <div>@line</div>
+    }
+</div>
+<input @bind="query" />
+<button class="btn btn-primary" @onclick="() => IncrementCount(query)">Click me</button>
+
+@code {
+    private int currentCount = 0;
+    private string query = "";
+    private List<string> list = new List<string>() { "test1", "test2" };
+    private void IncrementCount(string query)
+    {
+        list.Add(query);
+        currentCount++;
+    }
+}
