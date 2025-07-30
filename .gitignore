@@ -28,3 +28,5 @@ Thumbs.db
 node_modules/
 /BlazorAppSample/wwwroot/appsettings.json
 /BlazorAppSample/wwwroot/appsettings.Development.json
+/BlazorChatbot/appsettings.Development.json
+/BlazorChatbot/appsettings.json
